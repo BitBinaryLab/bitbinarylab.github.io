@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="bitBinaryLab">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="BitBinary Lab – Open-source innovation hub for AI, cybersecurity, blockchain, and future computing.">
+    <title>BitBinary Lab</title>
+
+    
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+
+
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+    <script src="app.js"></script>
+
+    <style>
+        
+        html,
+        body {
+            height: 100%;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            flex-direction: column;
+        }
+
+        body {
+            position: relative;
+            z-index: 0;
+        }
+
+        main {
+            flex: 1;
+        }
+    </style>
+</head>
+
+<body class="bg-red-100 text-gray-900">
+
+    <!-- Include Navbar -->
+    <div ng-include="'components/header.html'"></div>
+
+    <!-- Main Content (Loads via AngularJS Routing) -->
+    <main class="container mx-auto p-4">
+        <div ng-view></div>
+    </main>
+
+    <!-- Include Footer -->
+    <div ng-include="'components/footer.html'"></div>
+
+</body>
+
+</html>

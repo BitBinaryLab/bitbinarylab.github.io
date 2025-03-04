@@ -1,0 +1,36 @@
+<header class="bg-red-600 text-white p-4 flex  fixed sticky justify-between items-center sticky top-0 z-50 shadow-md" ng-controller="ThemeController">
+   
+    <h1 class="text-xl font-bold">BitBinary Lab</h1>
+
+   
+    <button class="md:hidden text-white text-2xl focus:outline-none transition-transform duration-300 ease-in-out" 
+        ng-click="toggleMenu()"
+        ng-class="{'rotate-180': menuOpen}">
+        <span class="block w-8 h-0.5 bg-white transition-transform duration-300 ease-in-out"
+            ng-class="{'rotate-45 translate-y-2': menuOpen}"></span>
+        <span class="block w-8 h-0.5 bg-white my-1 transition-opacity duration-300 ease-in-out"
+            ng-class="{'opacity-0': menuOpen}"></span>
+        <span class="block w-8 h-0.5 bg-white transition-transform duration-300 ease-in-out"
+            ng-class="{'-rotate-45 -translate-y-2': menuOpen}"></span>
+    </button>
+
+   
+    <nav class="hidden md:flex space-x-4">
+        <a href="#!home" class="hover:text-gray-300">Home</a>
+        <a href="#!vision" class="hover:text-gray-300">Vision</a>
+        <a href="#!research" class="hover:text-gray-300">Research</a>
+        <a href="#!projects" class="hover:text-gray-300">Projects</a>
+        <a href="#!about" class="hover:text-gray-300">About</a>
+    </nav>
+
+  
+    <nav class="absolute top-full left-0 w-full bg-red-700 p-4 flex flex-col items-center space-y-3 md:hidden shadow-lg transition-all duration-500 ease-in-out"
+         data-aos="fade-down"
+         ng-class="{'hidden': !menuOpen, 'block': menuOpen}">
+        <a href="#!home" class="hover:text-gray-300 uppercase tracking-wide" ng-click="toggleMenu()">Home</a>
+        <a href="#!about" class="hover:text-gray-300 uppercase tracking-wide" ng-click="toggleMenu()">About</a>
+        <a href="#!vision" class="hover:text-gray-300 uppercase tracking-wide" ng-click="toggleMenu()">Vision</a>
+        <a href="#!research" class="hover:text-gray-300 uppercase tracking-wide" ng-click="toggleMenu()">Research</a>
+        <a href="#!projects" class="hover:text-gray-300 uppercase tracking-wide" ng-click="toggleMenu()">Projects</a>
+    </nav>
+</header>
